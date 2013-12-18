@@ -164,7 +164,7 @@ L.Label = L.Class.extend({
 			direction = this._getDirection(),
 			labelWidth = this._labelWidth,
 			offset = L.point(this.options.offset),
-			varticalOffset;
+			verticalOffset;
 
 		if (direction === 'top') {
 			verticalOffset = offset.y;
@@ -192,10 +192,10 @@ L.Label = L.Class.extend({
 		return 'leaflet-label-' + direction;
 	},
 
-	_setProperClass: function (pos, direction) {
+	_setProperClass: function (pos, dir) {
 		var map = this._map,
 			container = this._container,
-			direction = direction || this._getDirection(),
+			direction = dir || this._getDirection(),
 			labelPoint = map.layerPointToContainerPoint(pos),
 			centerPoint = map.latLngToContainerPoint(map.getCenter()),
 			classToAdd = this._generateLabelClass(direction);
