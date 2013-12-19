@@ -170,12 +170,12 @@ L.Label = L.Class.extend({
 			verticalOffset = offset.y;
 			verticalOffset -= this._isOnMarker() ? this._getIconHeight() : 0;
 
-			pos = pos.add(L.point(-labelWidth / 2, verticalOffset));
+			pos = pos.add(L.point(Math.round(-labelWidth / 2), verticalOffset));
 		} else if (direction === 'bottom') {
 			verticalOffset = offset.y;
 			verticalOffset += this._isOnMarker ? this._getIconHeight() : 0;
 
-			pos = pos.add(L.point(-labelWidth / 2, verticalOffset));
+			pos = pos.add(L.point(Math.round(-labelWidth / 2), verticalOffset));
 		} else if (direction === 'right' || direction === 'auto' && labelPoint.x < centerPoint.x) {
 			direction = 'right';
 			pos = pos.add(offset);
