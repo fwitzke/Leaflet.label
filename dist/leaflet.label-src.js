@@ -157,9 +157,23 @@ L.Label = L.Class.extend({
 
 			this._prevContent = this._content;
 
-			this._labelWidth = this._container.offsetWidth;
+			this._labelWidth = this._calculateWidth(this._content.length);
 		}
 	},
+
+    _calculateWidth: function (textSize) {
+        if (textSize > 6) {
+            return 54;
+        } else if (textSize === 6) {
+            return 48;
+        } else if (textSize === 5) {
+            return 42;
+        } else if (textSize === 1) {
+            return 16;
+        } else {
+            return 36;
+        }
+    },
 
 	_updatePosition: function () {
 		var pos = this._map.latLngToLayerPoint(this._latlng);
