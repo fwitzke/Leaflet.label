@@ -168,6 +168,8 @@ L.Label = L.Class.extend({
             return 48;
         } else if (textSize === 5) {
             return 42;
+        } else if (textSize === 2) {
+            return 22;
         } else if (textSize === 1) {
             return 16;
         } else {
