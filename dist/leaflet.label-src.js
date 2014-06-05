@@ -7,7 +7,7 @@
 	https://github.com/jacobtoye
 */
 (function (window, document, undefined) {
-/*
+var L = window.L;/*
  * Leaflet.label assumes that you have already included the Leaflet library.
  */
 
